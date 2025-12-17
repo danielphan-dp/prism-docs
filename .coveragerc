@@ -1,0 +1,9 @@
+[run]
+omit =
+    src/prism_docs/cli.py
+    src/prism_docs/operations/ocr/*
+    src/prism_docs/operations/images/*
+    */__init__.py
+
+[report]
+show_missing = True

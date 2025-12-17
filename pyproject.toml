@@ -1,0 +1,96 @@
+[project]
+name = "prism-docs"
+version = "0.1.0"
+description = "CLI toolkit for PDF editing, security, OCR, and image conversion"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Daniel Phan", email = "danielphan-dp@users.noreply.github.com" }
+]
+keywords = [
+    "pdf",
+    "cli",
+    "toolkit",
+    "editing",
+    "security",
+    "ocr",
+    "images",
+    "conversion",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "cryptography>=3.1",
+    "pypdf>=4.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+images = [
+    "Pillow>=10.0.0",
+    "pdf2image>=1.16.0",
+]
+ocr = [
+    "pytesseract>=0.3.10",
+    "Pillow>=10.0.0",
+    "pdf2image>=1.16.0",
+]
+tables = [
+    "img2table>=1.3.0",
+    "torch>=2.0.0",
+    "pdf2image>=1.16.0",
+    "Pillow>=10.0.0",
+]
+all = [
+    "Pillow>=10.0.0",
+    "pdf2image>=1.16.0",
+    "pytesseract>=0.3.10",
+    "img2table>=1.3.0",
+    "torch>=2.0.0",
+]
+
+[project.scripts]
+prism-docs = "prism_docs.cli:main"
+pdf-tools = "prism_docs.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/danielphan-dp/pdf-tools"
+Repository = "https://github.com/danielphan-dp/pdf-tools"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/prism_docs"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+    "pyright>=1.1.380",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+include = ["src"]
+typeCheckingMode = "basic"
+reportMissingImports = "warning"
+reportMissingModuleSource = "warning"
+reportMissingTypeStubs = "warning"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

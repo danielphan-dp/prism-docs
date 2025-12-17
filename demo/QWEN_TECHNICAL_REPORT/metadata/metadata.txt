@@ -1,0 +1,5 @@
+Metadata for 'artifacts/pdfs/QWEN_TECHNICAL_REPORT.pdf':
+  Creator: LaTeX with hyperref
+  Producer: pdfTeX-1.40.24
+  Creation Date: 2023-09-25 03:03:49+00:00
+  Modification Date: 2023-09-25 03:03:49+00:00

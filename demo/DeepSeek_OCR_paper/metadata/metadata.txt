@@ -1,0 +1,5 @@
+Metadata for 'artifacts/pdfs/DeepSeek_OCR_paper.pdf':
+  Creator: LaTeX with hyperref
+  Producer: pdfTeX-1.40.27
+  Creation Date: 2025-10-17 08:28:51+00:00
+  Modification Date: 2025-10-17 08:28:51+00:00

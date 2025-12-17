@@ -1,0 +1,5 @@
+Metadata for 'artifacts/pdfs/DeepSeekMath_V2.pdf':
+  Creator: LaTeX with hyperref
+  Producer: pdfTeX-1.40.27
+  Creation Date: 2025-11-27 08:46:36+00:00
+  Modification Date: 2025-11-27 08:46:36+00:00
