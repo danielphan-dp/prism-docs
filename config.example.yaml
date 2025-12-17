@@ -1,0 +1,202 @@
+# Prism Docs Configuration Example
+# Copy this file to ~/.config/prism-docs/config.yaml or ./prism-docs.yaml
+
+# Global settings
+global:
+  verbose: false # Print detailed output
+  quiet: false # Suppress all output
+  dry_run: false # Show what would be done without doing it
+  parallel: false # Process multiple files in parallel
+  max_workers: 4 # Number of parallel workers
+
+# Default output settings (can be overridden per operation)
+default_output:
+  naming: suffix # suffix, prefix, fixed, or custom
+  suffix: "" # Suffix to add (e.g., "-processed")
+  prefix: "" # Prefix to add (e.g., "new-")
+  # fixed_name: ""        # Fixed output name
+  # pattern: "{stem}{suffix}{ext}"  # Custom pattern
+  # output_dir: ./output  # Output directory (default: same as input)
+  overwrite: overwrite # overwrite, skip, rename, or error
+
+# Per-operation configuration
+operations:
+  encrypt:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-encrypted"
+    options:
+      algorithm: AES-256 # RC4-40, RC4-128, AES-128, AES-256
+
+  decrypt:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-decrypted"
+
+  compress:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-compressed"
+    options:
+      compress_streams: true
+
+  watermark:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-watermarked"
+    options:
+      layer: below # below or above
+
+  extract-pages:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-extracted"
+
+  extract-text:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-text"
+
+  rotate:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-rotated"
+
+  split:
+    enabled: true
+    output:
+      # output_dir: ./split-output
+
+  merge:
+    enabled: true
+
+  metadata:
+    enabled: true
+
+  # Page manipulation operations
+  page-numbers:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-numbered"
+    options:
+      position: bottom-center # top-left, top-center, top-right, bottom-left, bottom-center, bottom-right
+      format: "Page {n} of {total}"
+      font_size: 12
+      margin: 36
+
+  stamp:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-stamped"
+    options:
+      position: center
+      font_size: 48
+      rotation: 45
+      opacity: 0.3
+
+  reverse:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-reversed"
+
+  interleave:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-interleaved"
+
+  remove-pages:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-edited"
+
+  overlay:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-overlaid"
+
+  # Image operations
+  images-to-pdf:
+    enabled: true
+    options:
+      page_size: A4
+      margin: 36
+      fit: contain # contain, cover, stretch
+
+  pdf-to-images:
+    enabled: true
+    options:
+      format: png # png, jpeg, webp
+      dpi: 150
+
+  extract-images:
+    enabled: true
+    options:
+      format: original # original, png, jpeg
+      min_size: 0
+
+  # Security operations
+  flatten:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-flattened"
+    options:
+      annotations: true
+      forms: true
+
+  permissions:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-restricted"
+
+  redact:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-redacted"
+    options:
+      color: black
+
+  # Info and utility operations
+  info:
+    enabled: true
+
+  validate:
+    enabled: true
+    options:
+      strict: false
+
+  crop:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-cropped"
+
+  resize:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-resized"
+    options:
+      size: A4
+      fit: contain
+
+  bookmarks:
+    enabled: true
+    output:
+      naming: suffix
+      suffix: "-bookmarked"
