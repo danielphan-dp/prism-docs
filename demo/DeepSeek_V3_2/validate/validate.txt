@@ -1,0 +1,1 @@
+'artifacts/pdfs/DeepSeek_V3_2.pdf' is valid

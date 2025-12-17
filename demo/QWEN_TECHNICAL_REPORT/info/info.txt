@@ -1,0 +1,6 @@
+PDF Info: QWEN_TECHNICAL_REPORT.pdf
+----------------------------------------
+  Pages: 59
+  Size: 1.5 MB
+  Page Size: 612 x 792 pt (8.5 x 11.0 in)
+  Encrypted: False

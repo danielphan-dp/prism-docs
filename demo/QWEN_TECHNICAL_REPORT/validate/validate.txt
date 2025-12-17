@@ -1,0 +1,1 @@
+'artifacts/pdfs/QWEN_TECHNICAL_REPORT.pdf' is valid

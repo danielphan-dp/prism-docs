@@ -1,0 +1,5 @@
+Metadata for 'artifacts/pdfs/DeepSeek_V3_2.pdf':
+  Creator: LaTeX with hyperref
+  Producer: pdfTeX-1.40.27
+  Creation Date: 2025-09-29 08:49:11+00:00
+  Modification Date: 2025-09-29 08:49:11+00:00
